@@ -1,21 +1,123 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Vegas Barber Shop</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vegas Barber Shop</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0b0b0b;
+      color: #f5f5f5;
+    }
+
+    header {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: linear-gradient(to bottom, #111, #000);
+    }
+
+    h1 {
+      font-size: 3rem;
+      letter-spacing: 4px;
+      margin: 0;
+    }
+
+    p {
+      color: #bbb;
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+
+    .btn {
+      margin-top: 25px;
+      padding: 12px 25px;
+      background: #d4af37;
+      color: black;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #b8962e;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #d4af37;
+      text-align: center;
+      margin-bottom: 20px;
+      letter-spacing: 2px;
+    }
+
+    .card {
+      background: #141414;
+      padding: 20px;
+      margin: 10px 0;
+      border-left: 3px solid #d4af37;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #666;
+      font-size: 0.9rem;
+      border-top: 1px solid #222;
+    }
+  </style>
 </head>
-<body style="font-family: Arial; text-align:center; background:#111; color:white;">
 
-    <h1>VEGAS BARBER SHOP</h1>
-    <p>Estilo clásico • Corte moderno • Barba perfecta</p>
+<body>
 
-    <h2>Ubicación</h2>
-    <p>Segunda Transversal 5462</p>
+<header>
+  <h1>VEGAS BARBER SHOP</h1>
+  <p>Estilo clásico • Precisión moderna • Experiencia premium</p>
 
-    <h2>Reservas</h2>
-    <a href="https://instagram.com/vegasbarber.cl" style="color:#0ff;">
-        Reserva por Instagram
-    </a>
+  <a class="btn" href="https://instagram.com/vegasbarber.cl" target="_blank">
+    Reservar por Instagram
+  </a>
+</header>
+
+<section>
+  <h2>SERVICIOS</h2>
+
+  <div class="card">Corte de cabello profesional</div>
+  <div class="card">Perfilado de barba</div>
+  <div class="card">Corte + barba (combo premium)</div>
+</section>
+
+<section>
+  <h2>UBICACIÓN</h2>
+
+  <div class="card">
+    Segunda Transversal 5462, Santiago
+  </div>
+</section>
+
+<section>
+  <h2>EXPERIENCIA</h2>
+
+  <div class="card">
+    Atención personalizada, ambiente cómodo y resultados de alto nivel.
+  </div>
+</section>
+
+<footer>
+  © 2026 Vegas Barber Shop — Todos los derechos reservados
+</footer>
 
 </body>
 </html>

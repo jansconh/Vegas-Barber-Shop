@@ -31,11 +31,13 @@ body {
 /* VEGAS */
 .title {
   font-size: 90px;
-  padding-right: 10px; /* ajusta aquí: 5px, 15px, 20px según gusto */
   color: #d4af37;
   letter-spacing: 4px;
   margin: 0;
   line-height: 1;
+
+  display: inline-block;   /* 👈 clave */
+  transform: translateX(10px); /* 👈 mueve de verdad */
 }
 
 /* BARBER SHOP */

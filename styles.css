@@ -6,35 +6,36 @@
     background-repeat: no-repeat;
 
     display: flex;
-    align-items: center;   /* centra vertical */
+    justify-content: flex-start; /* 👈 clave: lo manda a la izquierda */
+    align-items: center;
+
+    padding-left: 80px; /* 👈 mejor que margin-left */
+    box-sizing: border-box;
+    color: white;
 }
 
-/* CONTENIDO A LA IZQUIERDA */
 .hero-content {
-    margin-left: 80px;   /* distancia desde la izquierda */
-    text-align: left;    /* texto alineado a la izquierda */
-    max-width: 600px;
+    max-width: 650px;
+    text-align: left;
 }
 
-/* VEGAS */
 .title {
     font-size: 90px;
-    color: #d4af37; /* dorado elegante */
+    color: #d4af37;
     letter-spacing: 4px;
     margin: 0;
     font-weight: 700;
+    line-height: 1;
 }
 
-/* BARBER SHOP */
 .subtitle {
     font-size: 28px;
     color: white;
     letter-spacing: 6px;
-    margin: 5px 0 20px 0;
+    margin: 10px 0 20px 0;
     font-weight: 400;
 }
 
-/* TEXTO ABAJO */
 .description {
     font-size: 18px;
     color: white;

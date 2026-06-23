@@ -22,10 +22,12 @@ body {
 
 /* CONTENIDO DEL BANNER */
 .hero-content {
-  position: relative;
-  text-align: left !important;
+  text-align: left;
   width: 100%;
-  max-width: 650px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* 👈 clave real */
 }
 
 /* VEGAS */

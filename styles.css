@@ -22,7 +22,9 @@ body {
 
 /* CONTENIDO DEL BANNER */
 .hero-content {
-  text-align: left;
+  position: relative;
+  text-align: left !important;
+  width: 100%;
   max-width: 650px;
 }
 

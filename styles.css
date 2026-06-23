@@ -13,9 +13,8 @@ body {
   background-position: center;
   background-repeat: no-repeat;
 
-  display: flex;
-  justify-content: flex-start;  /* 👈 izquierda real */
-  align-items: center;
+  display: grid;
+  place-items: center start; /* 👈 clave: centro vertical, izquierda horizontal */
 
   padding-left: 80px;
   box-sizing: border-box;

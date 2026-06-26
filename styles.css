@@ -1,108 +1,335 @@
-body {
+/* ==========================================================================
+   1. RESET Y ESTILOS GENERALES
+   ========================================================================== */
+* {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #0b0b0b;
-  color: #f5f5f5;
-}
-
-/* 🔥 HERO / BANNER */
-.hero {
-  height: 100vh;
-  background-image: url("silla-barberia.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  display: grid;
-  place-items: center start; /* 👈 clave: centro vertical, izquierda horizontal */
-
-  padding-left: 80px;
+  padding: 0;
   box-sizing: border-box;
 }
 
-/* CONTENIDO DEL BANNER */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #060606; /* Un negro más profundo para que resalte el dorado */
+  color: #f5f5f5;
+  font-family: 'Montserrat', sans-serif; /* Tipografía limpia para textos generales */
+  overflow-x: hidden;
+}
+
+/* Enlaces globales */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ==========================================================================
+   2. BARRA DE NAVEGACIÓN (NAVBAR)
+   ========================================================================== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 80px;
+  background-color: rgba(6, 6, 6, 0.95);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2); /* Línea sutil dorada abajo */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.nav-logo {
+  font-family: 'Cinzel', serif;
+  line-height: 1.1;
+}
+
+.nav-logo .gold-text {
+  color: #d4af37;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.nav-logo .sub-logo {
+  color: #fff;
+  font-size: 10px;
+  letter-spacing: 4px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.nav-links a {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #bbb;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover, 
+.nav-links a.active {
+  color: #d4af37;
+}
+
+/* Botón contorno dorado arriba */
+.btn-outline {
+  border: 1px solid #d4af37;
+  color: #d4af37;
+  padding: 10px 20px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: all 0.3s;
+}
+
+.btn-outline:hover {
+  background: #d4af37;
+  color: #000;
+}
+
+/* ==========================================================================
+   3. HERO / PORTADA PRINCIPAL
+   ========================================================================== */
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("silla-barberia.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  display: grid;
+  place-items: center start;
+  padding-left: 80px;
+  padding-top: 80px; /* Compensa la barra fija superior */
+}
+
 .hero-content {
   text-align: left;
-  width: 100%;
-
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* 👈 clave real */
+  max-width: 600px;
 }
 
-/* VEGAS */
-.title {
-  font-size: 90px;
+.hero-title {
+  font-family: 'Cinzel', serif;
+  font-size: 100px;
+  font-weight: 400;
   color: #d4af37;
-  letter-spacing: 4px;
+  letter-spacing: 8px;
+  line-height: 0.9;
   margin: 0;
-  line-height: 1;
-
-  display: inline-block;   /* 👈 clave */
-  transform: translateX(0px); /* 👈 mueve de verdad */
 }
 
-/* BARBER SHOP */
-.subtitle {
-  font-size: 28px;
-  color: white;
-  letter-spacing: 6px;
-  margin: 10px 0 20px 0;
+.hero-subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  color: #fff;
+  letter-spacing: 12px;
+  margin: 10px 0 30px 0;
 }
 
-/* TEXTO NORMAL DEL HERO */
-.hero-content p {
-  font-size: 18px;
-  color: #ddd;
-  margin-bottom: 20px;
-}
-
-/* BOTÓN */
-.btn {
-  display: inline-block;
-  padding: 12px 25px;
-  background: #d4af37;
-  color: black;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 5px;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  background: #b8962e;
-}
-
-/* ❌ ESTO ERA EL PROBLEMA */
-section {
-  padding: 60px 20px;
-  max-width: 900px;
-  margin: 0 auto; /* OK para secciones, pero NO afecta hero ahora */
-}
-
-/* TITULOS SECCIONES */
-h2 {
-  color: #d4af37;
-  text-align: center;
-  margin-bottom: 20px;
+.hero-tagline {
+  font-size: 15px;
+  color: #ccc;
   letter-spacing: 2px;
+  line-height: 1.8;
+  margin-bottom: 35px;
 }
 
-.card {
-  background: #141414;
-  padding: 20px;
-  margin: 10px 0;
-  border-left: 3px solid #d4af37;
+/* Botón principal de WhatsApp */
+.btn-gold {
+  display: inline-block;
+  background: #b6922e; /* Tono ocre/dorado de tu imagen */
+  color: #fff;
+  padding: 15px 30px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  transition: background 0.3s;
 }
 
-footer {
-  text-align: center;
-  padding: 30px;
-  color: #666;
-  font-size: 0.9rem;
-  border-top: 1px solid #222;
+.btn-gold:hover {
+  background: #947420;
 }
 
-header.hero {
+/* ==========================================================================
+   4. SECCIÓN GALERÍA (ESTILO INSTAGRAM)
+   ========================================================================== */
+.gallery-section {
+  padding: 100px 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-subtitle {
+  color: #b6922e;
+  font-size: 12px;
+  letter-spacing: 3px;
+  margin-bottom: 5px;
+}
+
+.section-title {
+  font-family: 'Cinzel', serif;
+  font-size: 45px;
+  color: #fff;
+  letter-spacing: 4px;
+  margin-bottom: 15px;
+  font-weight: 400;
+}
+
+.gallery-desc {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 40px;
+}
+
+/* Cuadrícula perfecta de 4 columnas */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.gallery-item {
+  position: relative;
+  aspect-ratio: 1 / 1; /* Hace las imágenes perfectamente cuadradas */
+  overflow: hidden;
+  background: #111;
+}
+
+.gallery-item img {
   width: 100%;
+  height: 100%;
+  object-fit: cover; /* Recorta la imagen sin deformarla */
+  transition: transform 0.5s ease;
+  filter: brightness(0.9);
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+  filter: brightness(1);
+}
+
+.gallery-action {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.btn-insta {
+  border: 1px solid #333;
+  color: #d4af37;
+  padding: 12px 30px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  transition: border-color 0.3s;
+}
+
+.btn-insta:hover {
+  border-color: #d4af37;
+}
+
+/* ==========================================================================
+   5. PIE DE PÁGINA (FOOTER COMERCIAL)
+   ========================================================================== */
+.main-footer {
+  background: #090909;
+  border-top: 1px solid #1a1a1a;
+  padding: 60px 80px 20px 80px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 Columnas exactas */
+  gap: 40px;
+}
+
+.footer-column h3 {
+  font-size: 13px;
+  color: #fff;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-column ul {
+  list-style: none;
+}
+
+.footer-column ul li {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 12px;
+}
+
+.footer-column p {
+  font-size: 13px;
+  color: #888;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.gold-link {
+  color: #b6922e;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.btn-outline-footer {
+  display: inline-block;
+  border: 1px solid #b6922e;
+  color: #b6922e;
+  padding: 10px 18px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-top: 15px;
+}
+
+/* Línea de copyright final */
+.footer-bottom {
+  max-width: 1200px;
+  margin: 50px auto 0 auto;
+  padding-top: 20px;
+  border-top: 1px solid #1a1a1a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #555;
+  font-size: 12px;
+}
+
+.back-to-top {
+  font-size: 16px;
+  color: #888;
+}
+
+/* ==========================================================================
+   6. RESPONSIVE (Ajustes para celulares)
+   ========================================================================== */
+@media (max-width: 900px) {
+  .navbar { padding: 20px; }
+  .nav-links { display: none; } /* Oculta el menú largo en móviles */
+  
+  .hero { padding-left: 30px; }
+  .hero-title { font-size: 60px; }
+  .hero-subtitle { font-size: 18px; letter-spacing: 6px; }
+  
+  .gallery-section { padding: 60px 20px; }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); } /* 2 columnas en celular */
+  
+  .main-footer { padding: 40px 20px 20px 20px; }
+  .footer-container { grid-template-columns: 1fr; gap: 30px; } /* Columnas en vertical */
 }

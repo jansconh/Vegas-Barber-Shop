@@ -1,117 +1,104 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <link rel="stylesheet" href="styles.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vegas Barber Shop</title>
-
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0b0b0b;
-      color: #f5f5f5;
-    }
-
-
-    h1 {
-      font-size: 3rem;
-      letter-spacing: 4px;
-      margin: 0;
-    }
-
-    p {
-      color: #bbb;
-      font-size: 1.2rem;
-      margin-top: 10px;
-    }
-
-    .btn {
-      margin-top: 25px;
-      padding: 12px 25px;
-      background: #d4af37;
-      color: black;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 5px;
-      transition: 0.3s;
-    }
-
-    .btn:hover {
-      background: #b8962e;
-    }
-
-    section {
-      padding: 60px 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    h2 {
-      color: #d4af37;
-      text-align: center;
-      margin-bottom: 20px;
-      letter-spacing: 2px;
-    }
-
-    .card {
-      background: #141414;
-      padding: 20px;
-      margin: 10px 0;
-      border-left: 3px solid #d4af37;
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px;
-      color: #666;
-      font-size: 0.9rem;
-      border-top: 1px solid #222;
-    }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-<header class="hero">
-  <div class="hero-content">
-      <h1 class="title">VEGAS</h1>
-      <h2 class="subtitle">BARBER SHOP</h2>
-      <p>Estilo clásico • Precisión moderna • Experiencia premium</p>
 
-    <a class="btn" href="https://instagram.com/vegasbarber.cl" target="_blank">
-      Reservar por Instagram
-    </a>
-  </div>
-</header>
-  
-<section>
-  <h2>SERVICIOS</h2>
+  <nav class="navbar">
+    <div class="nav-logo">
+      <span class="gold-text">VEGAS</span><br><span class="sub-logo">BARBER SHOP</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#inicio" class="active">INICIO</a></li>
+      <li><a href="#servicios">SERVICIOS</a></li>
+      <li><a href="#galeria">GALERÍA</a></li>
+      <li><a href="#nosotros">NOSOTROS</a></li>
+      <li><a href="#ubicacion">UBICACIÓN</a></li>
+      <li><a href="#contacto">CONTACTO</a></li>
+    </ul>
+    <a href="https://wa.me/56912345678" target="_blank" class="btn-outline">RESERVAR AHORA 💬</a>
+  </nav>
 
-  <div class="card">Corte de cabello profesional</div>
-  <div class="card">Perfilado de barba</div>
-  <div class="card">Corte + barba (combo premium)</div>
-</section>
+  <header id="inicio" class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">VEGAS</h1>
+      <h2 class="hero-subtitle">BARBER SHOP</h2>
+      <p class="hero-tagline">ESTILO CLÁSICO. PRECISIÓN MODERNA.<br>EXPERIENCIA PREMIUM.</p>
+      <a class="btn-gold" href="https://wa.me/56912345678" target="_blank">
+        <span class="icon">💬</span> RESERVAR POR WHATSAPP
+      </a>
+    </div>
+  </header>
 
-<section>
-  <h2>UBICACIÓN</h2>
+  <section id="galeria" class="gallery-section">
+    <p class="section-subtitle">NUESTRO TRABAJO</p>
+    <h2 class="section-title">GALERÍA</h2>
+    <p class="gallery-desc">Cortes, barbas y estilos. Así trabajamos. Así te ves.</p>
+    
+    <div class="gallery-grid">
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=500" alt="Corte 1"></div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?q=80&w=500" alt="Corte 2"></div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?q=80&w=500" alt="Corte 3"></div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?q=80&w=500" alt="Corte 4"></div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1517832606589-7a598b38927e?q=80&w=500" alt="Corte 5"></div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=500" alt="Corte 6"></div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?q=80&w=500" alt="Corte 7"></div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?q=80&w=500" alt="Corte 8"></div>
+    </div>
 
-  <div class="card">
-    Segunda Transversal 5462, Santiago
-  </div>
-</section>
+    <div class="gallery-action">
+      <a href="https://instagram.com/vegasbarber.cl" target="_blank" class="btn-insta">VER MÁS EN INSTAGRAM 📸</a>
+    </div>
+  </section>
 
-<section>
-  <h2>EXPERIENCIA</h2>
+  <footer class="main-footer">
+    <div class="footer-container">
+      
+      <div class="footer-column">
+        <h3><span class="icon">✂️</span> SERVICIOS</h3>
+        <ul>
+          <li>Corte de cabello</li>
+          <li>Perfilado de barba</li>
+          <li>Corte + barba</li>
+          <li>Afeitado clásico</li>
+        </ul>
+      </div>
 
-  <div class="card">
-    Atención personalizada, ambiente cómodo y resultados de alto nivel.
-  </div>
-</section>
+      <div class="footer-column">
+        <h3><span class="icon">📍</span> UBICACIÓN</h3>
+        <p>Segunda Transversal 5462</p>
+        <p>San Miguel, Chile.</p>
+        <a href="#" class="gold-link">VER EN MAPA</a>
+      </div>
 
-<footer>
-  © 2026 Vegas Barber Shop — Todos los derechos reservados
-</footer>
+      <div class="footer-column">
+        <h3><span class="icon">🕒</span> HORARIOS</h3>
+        <p><strong>Lunes a Sábado</strong></p>
+        <p>11:00 - 20:30</p>
+        <p><strong>Domingos</strong></p>
+        <p>12:00 - 18:00</p>
+      </div>
+
+      <div class="footer-column">
+        <h3><span class="icon">💬</span> RESERVAS</h3>
+        <p>Haz tu reserva por WhatsApp y asegura tu horario.</p>
+        <a href="https://wa.me/56912345678" target="_blank" class="btn-outline-footer">RESERVAR AHORA 💬</a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Vegas Barber Shop. Todos los derechos reservados.</p>
+      <a href="#inicio" class="back-to-top">↑</a>
+    </div>
+  </footer>
 
 </body>
 </html>

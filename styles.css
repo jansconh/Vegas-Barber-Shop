@@ -39,7 +39,7 @@ body {
   line-height: 1;
 
   display: inline-block;   /* 👈 clave */
-  transform: translateX(-10px); /* 👈 mueve de verdad */
+  transform: translateX(-100px); /* 👈 mueve de verdad */
 }
 
 /* BARBER SHOP */
